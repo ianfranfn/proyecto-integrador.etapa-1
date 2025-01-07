@@ -1,0 +1,31 @@
+@use './base/resets'; // importar el parcial _resets.scss al archivo principal main.scss
+@use './base/typography'; // importar el parcial _typography.scss al archivo principal main.scss
+
+/* Estructura 7 en 1.
+! base -> todos los estilos de inicio
+-> _reset.scss
+-> _typografhy.scss
+-> _variables.scss
+! components
+-> _buttons.scss
+-> _slider.scss
+-> _cards.scss
+! layout
+-> _header.scss
+-> _footer.scss
+-> _sidebar.scss
+-> _principal.scss (para proyectos medianos a grandes)
+! pages
+-> _home.scss
+-> _contacto.scss
+-> _nosotros.scss
+! themes
+-> _theme-dark.scss
+-> _theme-light.scss
+! utils
+-> _mixins.scss
+-> _functions.scss
+! vendors
+-> _bootstrap.scss
+-> _normalize.scss
+*/
