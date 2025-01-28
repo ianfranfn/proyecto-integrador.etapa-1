@@ -1,7 +1,8 @@
 @use './base/resets'; // importar el parcial _resets.scss al archivo principal main.scss
 @use './base/typography'; // importar el parcial _typography.scss al archivo principal main.scss
 @use './layout/header'; // importar el parcial _header.scss al archivo principal main.scss
-
+@use './pages/inicio'; // importar el parcial _inicio.scss al archivo principal main.scss
+@use './components/cards' // importar el parcial _cards.scss al archivo principal main.scss
 /* Estructura 7 en 1.
 ! base -> todos los estilos de inicio
 -> _reset.scss

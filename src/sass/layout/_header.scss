@@ -1,16 +1,31 @@
 /* ----------------------------------------------- */
 /* HEADER                                          */
 /* ----------------------------------------------- */
-
+/* MOBILE FIRST */
 .main-header {
     display: flex;
     flex-direction: column-reverse;
+
+    @media screen and (min-width: 992px) {
+        & {
+            flex-direction: column;
+        }
+    }
 }
 
 #menu {
-    display: flex;
+    display: none;
 
-    // hacer funcionar el checkbox -> hacer funcionar el menu hamburguesa
+    /* Hacer funcionar el checkbox -> Hacer funcionar el menú hamburgüesa */
+
+    &:checked + .nav-bar {
+        display: block;
+    }
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors */
+    &:checked ~ .search-bar .menu-toogle .menu-toogle__label {
+        background-color: #f45a0d;
+        box-shadow: 1px 5px 15px;
+    }
 }
 
 /* ----------------------------------------------- */
@@ -19,65 +34,142 @@
 
 .nav-bar {
     background-color: mediumaquamarine;
-   /*  display: none; */
+    display: none;
 
-   &__nav-list { // .nav-bar__nav-list
-       display: flex;
+    &__nav-list { /* .nav-bar__nav-list */
+        display: flex;
         flex-direction: column;
         justify-content: center;
         list-style-type: none;
-   }
 
-   &__nav-item{ // .nav-bar__nav-item
-    text-align: center;
-    background-color: pink;
-   }
+        @media screen and (min-width: 992px) {
+            & {
+                flex-direction: row;
+            } 
+        }
+    }
 
-   &__nav-link { // .nav-bar__nav-link
-    display: block;
-    background-color: purple;
-    padding: 1rem 2rem;
-    color: white;
-   }
+    &__nav-item { /* .nav-bar__nav-item */
+        text-align: center;
+        background-color: pink;
+    }
+
+    &__nav-link {
+        display: block;
+        background-color: #466D1D;
+        padding: 1rem 2rem;
+        color: white;
+    }
+
+    @media screen and (min-width: 992px) {
+        & {
+            display: block;
+        }
+    }
 }
 
 /* ----------------------------------------------- */
-/* searchbar                                          */
+/* SEARCH BAR                                          */
 /* ----------------------------------------------- */
 
 .search-bar {
     display: flex;
-    background-color: olivedrab;
+    background-color: #f8a57b;
     justify-content: space-around;
 
-    &__logo-container { // .search-bar__logo-container
-        width: 18,75rem;
-        height: 3,75rem;
+    &__logo-container { /* .search-bar__logo-container */
+        background-color: #eee;
+        width: 7.75rem;
+        height: 3.75rem;
+        margin-left: 1rem;
+        align-self: center;
+        border-radius: 100%;
     }
 
-    &__form-container { // .search-bar__form-container
+    &__form-container { /* .search-bar__form-container */
         padding: 1rem;
-        background-color: gold;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+
     }
 
     &__form-label {
-        background-color: greenyellow;
+        display: none;
     }
 
-    &__form-search{
-        background-color: deeppink;
-
+    &__form-search {
+        background-color: #eee;
+        padding: 0.5rem;
+        width: 15rem;
+        border-radius: 0.7rem;
     }
 
     &__form-submit {
-        background-color: darkslategrey;
-
+        background-color: transparent;
+        color: #333;
+        font-size: 1em;
+        border: 0px;
+        width: 1em;
+        
     }
 
-    &__carrito-container { // .search-bar__carrito-container
-        /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-        flex: 0 0 3rem;
-        background-color: goldenrod;
-
+    &__carrito-container {
+        flex: 0 0 3rem; /* shorthand (grow shrink basis) */
+        font-size: 2.5em;
     }
 }
+
+/* ----------------------------------------------- */
+/* MENÚ TOOGLE                                     */
+/* ----------------------------------------------- */
+
+.menu-toogle {
+    display: block;
+    flex: 0 0 3rem;
+    position: relative;
+    cursor: pointer; /* manito */
+
+    &__label { /* .menu-toogle__label */
+        display: block;
+        background-color: #ff8345;
+        height: 100%;
+        border-radius: 0.5rem;
+        
+    }
+
+    &__top-bread, /* .menu-toogle__top-bread */
+    &__meat, /* .menu-toogle__top-bread */
+    &__bottom-bread { /* .menu-toogle__top-bread */
+        displaY: block;
+        background-color: #333;
+        height: .2rem;
+        position: absolute;
+        left: .5rem;
+        right: .5rem;
+    }
+
+    &__top-bread {
+        top: .8rem;
+    }
+
+    &__meat { /* Centrar sin usar flexbox */
+        top: 50%; /* centrando verticalmente */
+        margin-top: -.1rem;
+    }
+
+    &__bottom-bread {
+        bottom: .8rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        & { /* .menu-toogle */
+            display: none;  
+        }
+    }
+
+}
+
+
+
+
