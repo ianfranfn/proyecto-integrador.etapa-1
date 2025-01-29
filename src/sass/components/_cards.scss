@@ -86,3 +86,12 @@
     }
 
 }
+
+.section-cards {
+    display: flex;
+    justify-content: center;
+    
+    &__header-title {
+        font-family: 'Mojito-in-June', sans-serif, serif;
+    }
+}

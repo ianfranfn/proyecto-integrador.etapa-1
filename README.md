@@ -16,8 +16,6 @@ npm i
 npm run dev
 ```
 
-## Instalando el preprocesador de SASS
 
-```sh
 
 
