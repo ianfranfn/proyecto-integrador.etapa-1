@@ -1,27 +1,32 @@
 .card {
 
-    min-width: 400px;
+    display: flex;
+    min-width: 350px;
     max-width: 500px;
-    height: 200px;
-
-    background-color: orange;
+    height: 350px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 1px 5px 0px rgba(0 ,0 ,0 ,0.3);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: transform .2s;
+    /* ! No puede ser all */
+    background: linear-gradient(to right, #f0f0f0, #c0c0c0);
 
-    transition: transform .2s; /* ! No puede ser all */
 
     &:hover,
     &:focus {
-        /* radianes 2pi, gradianes 400, decimles 360 grados, vueltas 1turn  */
-        transform: scale(1.03) skew(0deg) rotate(2deg);
-        transform-origin: bottom;
-        box-shadow: 0px 7px 8px 0px rgba(0 ,0 ,0 ,0.5);
+        /* radianes 2pi, gradianes 400, decimales 360 grados, vueltas 1turn  */
+        transform: scale(1.20) skew(0deg) rotate(0deg);
+        transform-origin: top;
+        width: 1rem;
+        height: 30rem;
+        box-shadow: 0px 7px 8px 10px rgba(0, 0, 0, 0.5);
     }
 
     &__article {
         display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     &__image {
@@ -30,58 +35,63 @@
         height: 100%;
     }
 
-    &:nth-child(5n + 1) {
-        background-image: linear-gradient(to top, #aaafad 0%, #60efff 100%);
-    }
-
-    &:nth-child(5n + 2) {
-        background-image: linear-gradient(to top, #696eff 0%, #f8accf 100%);
-    }
-
-    &:nth-child(5n + 3) {
-        background-image: linear-gradient(to top, #ff1b6b 0%, #34caff 100%);
-    }
-
-    &:nth-child(5n + 4) {
-        background-image: linear-gradient(to top, #ff930f 0%, #fff95b 100%);
-    }
-
-    &:nth-child(5n + 5) {
-        background-image: linear-gradient(to top, #ff0f7b 0%, #f89b29 100%);
-    }
 
     &__image-container {
         height: 200px;
-        background-color: blue;
         overflow: hidden;
-        clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); /* Estado inicial */
     }
 
-    &:hover &__image-container,
-    &:focus &__image-container {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Estado final */
+    &__heading {
+        justify-self: center;
+        margin-top: 15%;
+        color: #6D071A;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
-    /* Responsive ->  992px */
+    &:hover &__heading,
+    &:focus &__heading {
+        margin-top: 5%;
+    }
 
-    @media screen and (min-width: 992px) {
-        & { /* .card */
+    &__description {
+        display: none;
+    }
+
+    &:hover &__description,
+    &:focus &__description {
+        display: flex;
+        justify-self: flex-start;
+        align-self: flex-start;
+        width: 19.9rem;
+        margin: 1rem;
+    }
+
+
+    /* Responsive tablets ->  768px */
+
+    @media screen and (min-width: 768px) {
+        & {
+            /* .card */
             width: 220px;
             max-width: 300px;
             height: 400px;
         }
 
-        &__article { /* .card__article */
+        &__article {
+            /* .card__article */
             flex-direction: column;
         }
 
-        & &__image-container { /* .card .card__image-container */
-            clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px); /* Estado inicial */
+        & &__image-container {
+            /* .card .card__image-container */
+            clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+            /* Estado inicial */
         }
 
         &:hover &__image-container,
         &:focus &__image-container {
-            clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px); /* Estado final */
+            clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+            /* Estado final */
         }
     }
 
@@ -90,8 +100,15 @@
 .section-cards {
     display: flex;
     justify-content: center;
-    
+
     &__header-title {
         font-family: 'Mojito-in-June', sans-serif, serif;
+        font-size: 3em;
+        margin-top: 4rem;
+    }
+
+    &__header-search-result {
+        justify-content: flex-start;
+        align-self: flex-start;
     }
 }

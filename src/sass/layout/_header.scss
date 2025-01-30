@@ -4,6 +4,10 @@
 /* MOBILE FIRST */
 .main-header {
     display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
     flex-direction: column-reverse;
 
     @media screen and (min-width: 992px) {
@@ -33,7 +37,6 @@
 /* ----------------------------------------------- */
 
 .nav-bar {
-    background-color: mediumaquamarine;
     display: none;
 
     &__nav-list { /* .nav-bar__nav-list */
