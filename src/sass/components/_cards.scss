@@ -66,6 +66,88 @@
         margin: 1rem;
     }
 
+    &__form-container {
+        display: none;
+        margin-top: 1rem;
+    }
+
+    &__form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    &__form-group-title {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        color: #6D071A;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    &__form-input-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__form-input {
+        margin: 0; 
+    }
+    
+    &__botones-container {
+        display: none;
+        margin-top: 1.5rem;
+    }
+
+    &__boton {
+        flex: 1; // Ambos botones ocupan el mismo espacio
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+
+        &:hover {
+            transform: scale(1.05); // Efecto de escala al hacer hover
+        }
+
+        &--carrito {
+            background-color: #6D071A;
+            color: white;
+
+            &:hover {
+                background-color: #3a040e;
+            }
+        }
+
+        &--pedir-ahora {
+            background-color: #28a745;
+            color: white;
+
+            &:hover {
+                background-color: #1d7632; 
+            }
+        }
+    }
+
+    &:hover &__botones-container,
+    &:focus &__botones-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    &:hover &__form-container,
+    &:focus &__form-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+
 
     /* Responsive tablets ->  768px */
 

@@ -56,96 +56,110 @@ const start3 = () => {
         //!  FORMULARIO                                     
         // ----------------------------------------------- 
 
-        const form = document.createElement('form')
-        form.classList.add('card__form')
-        cardContent.appendChild(form)
-        const formContainer = document.createElement('div')
-        formContainer.classList.add('card__form-container')
-        form.appendChild(formContainer)
-
-        const labelBlanca = document.createElement('label')
-        labelBlanca.htmlFor = 'salsaBlanca'
-        labelBlanca.classList.add('card__form-input-container')
-        labelBlanca.classList.add('pasta')
-        labelBlanca.textContent = 'Selecciona la salsa:'
-        formContainer.appendChild(labelBlanca)
-        // console.log(labelBlanca)
-
-        const salsaBlanca = document.createElement('input')
-        salsaBlanca.id = 'salsaBlanca'
-        salsaBlanca.type = 'radio'
-        salsaBlanca.classList.add('card__form-input')
-        salsaBlanca.textContent = 'Salsa Blanca'
-        labelBlanca.appendChild(salsaBlanca)
-        //console.log(formContainer)
-
-        const labelRoja = document.createElement('label')
-        labelRoja.htmlFor = 'salsaBolo'
-        labelRoja.classList.add('card__form-input-container')
-        labelRoja.classList.add('pasta')
-        formContainer.appendChild(labelRoja)
-
-
-
-
-        const labelSg = document.createElement('label')
-        labelSg.htmlFor = 'salsaBlanca'
-        labelSg.classList.add('card__form-input-container')
-        labelSg.classList.add('no-pasta')
-        labelSg.textContent = 'Selecciona la guarnición:'
-        formContainer.appendChild(labelSg)
-
-
-
-
-        const labelPapas = document.createElement('label')
-        labelPapas.htmlFor = 'salsaBlanca'
-        labelPapas.classList.add('card__form-input-container')
-        labelPapas.classList.add('no-pasta')
-        formContainer.appendChild(labelPapas)
-
-
-
-
-        const labelPure = document.createElement('label')
-        labelPure.htmlFor = 'salsaBlanca'
-        labelPure.classList.add('card__form-input-container')
-        labelPure.classList.add('pasta')
-        formContainer.appendChild(labelPure)
-
-
-
-
-        const labelEnsalada = document.createElement('label')
-        labelEnsalada.htmlFor = 'salsaBlanca'
-        labelEnsalada.classList.add('card__form-input-container')
-        labelEnsalada.classList.add('pasta')
-        formContainer.appendChild(labelEnsalada )
+        const form = document.createElement('form');
+        form.classList.add('card__form');
+        cardContent.appendChild(form);
+    
+        // Contenedor para el formulario
+        const formContainer = document.createElement('div');
+        formContainer.classList.add('card__form-container');
+        form.appendChild(formContainer);
+    
+        // Grupo de opciones para la salsa
+        const salsaGroup = document.createElement('div');
+        salsaGroup.classList.add('card__form-group');
+        formContainer.appendChild(salsaGroup);
+    
+        const salsaLabel = document.createElement('h3');
+        salsaLabel.textContent = 'Selecciona la salsa:';
+        salsaLabel.classList.add('card__form-group-title');
+        salsaGroup.appendChild(salsaLabel);
+    
+        const salsaBlanca = crearRadioButton('salsa', 'salsaBlanca', 'Salsa blanca');
+        const salsaRoja = crearRadioButton('salsa', 'salsaRoja', 'Salsa Roja');
+        salsaGroup.appendChild(salsaBlanca);
+        salsaGroup.appendChild(salsaRoja);
+    
+        // Grupo de opciones para la guarnición
+        const guarnicionGroup = document.createElement('div');
+        guarnicionGroup.classList.add('card__form-group');
+        formContainer.appendChild(guarnicionGroup);
+    
+        const guarnicionLabel = document.createElement('h3');
+        guarnicionLabel.textContent = 'Selecciona la guarnición:';
+        guarnicionLabel.classList.add('card__form-group-title');
+        guarnicionGroup.appendChild(guarnicionLabel);
+    
+        const sinGuar = crearRadioButton('guarnicion', 'sinGuar', 'Sin guarn.');
+        const papas = crearRadioButton('guarnicion', 'papas', 'Papas fritas');
+        const pure = crearRadioButton('guarnicion', 'pure', 'Puré');
+        const ensalada = crearRadioButton('guarnicion', 'ensalada', 'Ensalada');
+        guarnicionGroup.appendChild(sinGuar);
+        guarnicionGroup.appendChild(papas);
+        guarnicionGroup.appendChild(pure);
+        guarnicionGroup.appendChild(ensalada);
+    
+        // Función para crear un radio button con su label
+        function crearRadioButton(name, id, text) {
+            const label = document.createElement('label');
+            label.htmlFor = id;
+            label.classList.add('card__form-input-container');
+    
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.id = id;
+            radio.name = name;
+            radio.classList.add('card__form-input');
+    
+            label.appendChild(radio);
+            label.appendChild(document.createTextNode(' ' + text));
+    
+            return label;
+        }
 
 
 
- /*  <form action="" class="card__form">
-      <div class="card__form-container"> 
-       ? <label for="salsaBlanca" class="card__form-input-container pasta" >Selecciona la salsa:
-          *  <input ID="salsaBlanca" type="radio" class="card__form-input"> Salsa Blanca
-          </label>
-       ?   <label for="salsaBolo" class="card__form-input-container pasta">
-          *  <input ID="salsaBolo" type="radio" class="card__form-input"> Salsa Bolognesa
-          </label>
-       ?   <label for="sg" class="card__form-input-container no-pasta" >Selecciona la guarnicion:
-          *  <input ID="sg" type="radio" class="card__form-input"> Sin guar.
-          </label>
-       ?   <label for="papas" class="card__form-input-container no-pasta">
-          *  <input ID="papas" type="radio" class="card__form-input"> Papas fritas
-          </label>
-       ?   <label for="pure" class="card__form-input-container no-pasta">
-          *  <input ID="pure" type="radio" class="card__form-input"> Puré 
-          </label>
-       ?   <label for="ensalada" class="card__form-input-container no-pasta">
-          *  <input ID="ensalada" type="radio" class="card__form-input"> Ensalada
-          </label>
-      </div>
-        </form> */
+        /*  <form action="" class="card__form">
+             <div class="card__form-container"> 
+              ? <label for="salsaBlanca" class="card__form-input-container pasta" >Selecciona la salsa:
+                 *  <input ID="salsaBlanca" type="radio" class="card__form-input"> Salsa Blanca
+                 </label>
+              ?   <label for="salsaBolo" class="card__form-input-container pasta">
+                 *  <input ID="salsaBolo" type="radio" class="card__form-input"> Salsa Bolognesa
+                 </label>
+              ?   <label for="sg" class="card__form-input-container no-pasta" >Selecciona la guarnicion:
+                 *  <input ID="sg" type="radio" class="card__form-input"> Sin guar.
+                 </label>
+              ?   <label for="papas" class="card__form-input-container no-pasta">
+                 *  <input ID="papas" type="radio" class="card__form-input"> Papas fritas
+                 </label>
+              ?   <label for="pure" class="card__form-input-container no-pasta">
+                 *  <input ID="pure" type="radio" class="card__form-input"> Puré 
+                 </label>
+              ?   <label for="ensalada" class="card__form-input-container no-pasta">
+                 *  <input ID="ensalada" type="radio" class="card__form-input"> Ensalada
+                 </label>
+             </div>
+               </form> */
+
+    // -----------------------------------------------
+    // ! BOTONES COMPRA
+    // -----------------------------------------------
+    const botonesContainer = document.createElement('div');
+    botonesContainer.classList.add('card__botones-container');
+    cardContent.appendChild(botonesContainer);
+
+    // Boton "Carrito"
+    const botonCarrito = document.createElement('button');
+    botonCarrito.textContent = 'Carrito';
+    botonCarrito.classList.add('card__boton', 'card__boton--carrito');
+    botonesContainer.appendChild(botonCarrito);
+
+    // Boton "Pedir ahora"
+    const botonPedirAhora = document.createElement('button');
+    botonPedirAhora.textContent = 'Pedir ahora';
+    botonPedirAhora.classList.add('card__boton', 'card__boton--pedir-ahora');
+    botonesContainer.appendChild(botonPedirAhora);
 
         console.log(cardContent)
         //console.log(card)
