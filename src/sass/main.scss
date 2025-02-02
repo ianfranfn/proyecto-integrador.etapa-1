@@ -3,6 +3,7 @@
 @use './layout/header'; // importar el parcial _header.scss al archivo principal main.scss
 @use './pages/inicio'; // importar el parcial _inicio.scss al archivo principal main.scss
 @use './components/cards'; // importar el parcial _cards.scss al archivo principal main.scss
+@use './components/form'; // importar el parcial _form.scss al archivo principal main.scss
 
 body {
     background-color: #F5F5DC;
