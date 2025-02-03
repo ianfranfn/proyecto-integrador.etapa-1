@@ -141,9 +141,12 @@ const start3 = () => {
          // -----------------------------------------------
         // ! EVENTO DE CLIC PARA ABRIR/CERRAR LA CARD
         // -----------------------------------------------
-        
-        card.addEventListener('click', function () {
-            this.classList.toggle('active');
+
+        card.addEventListener('click', function (e) {
+
+            if (!e.target.closest('.card__form-container') && !e.target.closest('.card__botones-container')) {
+                this.classList.toggle('active')
+            }
         });
 
         console.log(cardContent)
