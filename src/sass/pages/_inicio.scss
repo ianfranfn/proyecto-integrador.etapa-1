@@ -7,6 +7,12 @@ body {
     padding: 1rem;
 }
 
+main {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 1vw, 3rem );
+}
+
 .cards-container {
     display: flex;
     flex-flow: row wrap;
@@ -23,5 +29,22 @@ body {
     @media screen and (min-width: 1000px) {
         padding: 0 5rem;
         margin-left: 2rem;
+    }
+
+    @media screen and (min-width: 1230px) {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: -1rem;
+    }
+
+    @media screen and (min-width: 1400px) {
+        gap: 3rem;
+    }
+
+    @media screen and (min-width: 1800px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (min-width: 2000px) {
+        grid-template-columns: repeat(5, 1fr);
     }
 }

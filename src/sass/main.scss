@@ -4,6 +4,7 @@
 @use './pages/inicio'; // importar el parcial _inicio.scss al archivo principal main.scss
 @use './components/cards'; // importar el parcial _cards.scss al archivo principal main.scss
 @use './components/form'; // importar el parcial _form.scss al archivo principal main.scss
+@use './layout/footer'; // importar el parcial _form.scss al archivo principal main.scss
 
 /* Estructura 7 en 1.
 ! base -> todos los estilos de inicio
