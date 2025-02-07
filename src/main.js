@@ -1,5 +1,6 @@
 import productos from './db/productos'
 import './sass/main.scss'
+/* import './sass/pages/_nosotros.scss' */
 
 console.log(productos) // array Productos
 
