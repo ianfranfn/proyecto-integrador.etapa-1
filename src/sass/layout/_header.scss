@@ -98,7 +98,7 @@
             left: 0;
             margin-left: 0;
             width: 15rem;
-            height: 71rem;
+            height: 68.5rem;
             background-color: #f8a57b;
             box-shadow: 5px 0 15px rgba(0,0,0,0.1);
         }
@@ -206,8 +206,9 @@
         }
 
         @media screen and (min-width: 1400px) {
-            width: clamp(8rem, 10vw, 12rem);
+            width: clamp(20rem, 25vw, 30rem);
             height: clamp(4rem, 10vw, 6.5rem);
+            margin-left: -5rem;
         }
 
         @media screen and (min-width: 1800px) {
@@ -235,10 +236,19 @@
             margin-left: 5rem;
         }
 
+        @media screen and (min-width: 1230px) {
+            margin-left: 10rem; 
+        }
+        
+        @media screen and (min-width: 1400px) {
+            margin-left: 15rem;
+            font-size: 4rem;
+        }
+
         @media screen and (min-width: 1800px) {
             margin-left: auto;
-            font-size: 4rem;
             margin-right: 2rem;
+            font-size: 4.5rem;
         }
     }
 }
