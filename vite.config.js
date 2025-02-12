@@ -9,10 +9,12 @@ export default {
     },
     build: {
         rollupOptions: {
-            input: resolve(__dirname, 'index.html'),
-            input: resolve(__dirname, '_alta.html'),
-            input: resolve(__dirname, '_contacto.html'),
-            input: resolve(__dirname, '_nosotros.html')
+            input: {
+                main: resolve(__dirname, 'index.html'),
+                pages: resolve(__dirname, './src/pages/_alta.html'),
+                pages: resolve(__dirname, './src/pages/_contacto.html'),
+                pages: resolve(__dirname, './src/pages/_nosotros.html')
+            }
         }
     }
 }
