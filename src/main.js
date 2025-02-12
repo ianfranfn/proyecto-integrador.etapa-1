@@ -139,7 +139,7 @@ const start3 = () => {
         botonPedirAhora.classList.add('card__boton', 'card__boton--pedir-ahora');
         botonesContainer.appendChild(botonPedirAhora);
 
-         // -----------------------------------------------
+        // -----------------------------------------------
         // ! EVENTO DE CLIC PARA ABRIR/CERRAR LA CARD
         // -----------------------------------------------
 
@@ -169,4 +169,5 @@ const start3 = () => {
 
 //                          evento        | callback
 window.addEventListener('DOMContentLoaded', start3) /* se dispara cuando todo el html fue leido (cargado) */
+
 

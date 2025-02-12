@@ -1,13 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Proyecto Integrador - Nosotros</title>
 </head>
+
 <body>
-    
+
+    <header class="contacto-main-header">
+        <input type="checkbox" id="menu">
+
+        <nav class="contacto-nav-bar">
+            <ul class="contacto-nav-bar__nav-list">
+                <li class="contacto-nav-bar__nav-item">
+                    <a href="../../index.html" class="contacto-nav-bar__nav-link">Inicio</a>
+                </li>
+                <li class="contacto-nav-bar__nav-item">
+                    <a href="./_alta.html" class="contacto-nav-bar__nav-link">Alta</a>
+                </li>
+                <li class="contacto-nav-bar__nav-item">
+                    <a href="./_nosotros.html" class="contacto-nav-bar__nav-link">Nosotros</a>
+                </li>
+                <li class="contacto-nav-bar__nav-item">
+                    <a href="./_contacto.html" class="contacto-nav-bar__nav-link">Contacto</a>
+                </li>
+            </ul>
+        </nav> <!-- .nav-bar -->
+
+        <div class="contacto-search-bar">
+            <img src="../../imgs/logo-humaita-contacto.webp" class="contacto-search-bar__logo-container" alt="">
+            <div class="contacto-search-bar__carrito-container"><i class="bi bi-cart4"></i></div>
+            <div class="menu-toogle">
+                <label for="menu" class="menu-toogle__label">
+                    <span class="menu-toogle__top-bread"></span>
+                    <span class="menu-toogle__meat"></span>
+                    <span class="menu-toogle__bottom-bread"></span>
+                </label>
+            </div> <!-- .menu-toogle -->
+        </div> <!-- .search-bar -->
+
+    </header>
+
+    <main class="nosotros-main">
+        <header class="nosotros-main__header">
+            <h1 class="nosotros-main__titulo">Nuestra Historia</h1>
+            <p class="nosotros-main__subtitulo">Más de 20 años sirviendo los mejores sabores tradicionales con un toque
+                moderno</p>
+        </header>
+
+        <!-- Sección Historia -->
+        <section class="nosotros-section">
+            <h2 class="nosotros-section__titulo">Desde nuestros inicios</h2>
+            <div class="nosotros-section__contenido">
+                <p class="nosotros-section__texto">
+                    Humaitá nació en 2019 como un sueño familiar que buscaba honrar las raíces históricas
+                    de las <strong>Ruinas de Humaitá</strong>, emblemático sitio paraguayo declarado Patrimonio Cultural
+                    de la Humanidad. Lo que comenzó como un pequeño local familiar, hoy se ha transformado
+                    en un referente gastronómico que une lo mejor de las culturas argentina y paraguaya.<br><br>
+        
+                    En 2024 dimos un paso innovador con la inauguración de <strong>"Patio Ruinas"</strong>, nuestro
+                    espacio al aire libre dedicado a las comidas rápidas gourmet, donde la historia se mezcla con
+                    la modernidad en cada detalle.
+                </p>
+                <img src="../../imgs/humaita-imagen.webp" alt="Imagen del restaurante" class="nosotros-section__imagen">
+            </div>
+        </section>
+
+        <div class="nosotros-separator"></div>
+
+        <section class="nosotros-section">
+            <h2 class="nosotros-section__titulo">Nuestra Propuesta Gastronómica</h2>
+            <div class="nosotros-section__content">
+                <p class="nosotros-text">
+                    Bajo la dirección de nuestra chef fundadora, egresada de la prestigiosa Escuela 
+                    Argentina de Cocina, ofrecemos una experiencia culinaria única donde conviven:<br><br>
+                    
+                    🍔 <strong>Comidas rápidas premium</strong>: Hamburguesas artesanales y pizzas de horno de barro<br>
+                    🍝 <strong>Cocina tradicional</strong>: Pastas caseras y asados con cortes seleccionados<br>
+                    🍹 <strong>Mixología creativa</strong>: Tragos signature con toques regionales<br>
+                    🥘 <strong>Fusión cultural</strong>: Platos que dialogan entre Paraguay y Argentina<br><br>
+                    
+                    Nuestro compromiso: Mantener la autenticidad de las recetas tradicionales mientras 
+                    innovamos con técnicas contemporáneas.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Sección Nuevo Patio -->
+        <section class="nosotros-section">
+            <h2 class="nosotros-section__title">Patio Ruinas: Un viaje sensorial</h2>
+            <div class="nosotros-section__content">
+                <p class="nosotros-text">
+                    Nuestra joya de 2024 no es solo un espacio gastronómico, sino un homenaje arquitectónico 
+                    a la historia que nos inspira. En <strong>Patio Ruinas</strong> encontrarás:<br><br>
+                    
+                    • Ambiente al aire libre con diseño que evoca las construcciones históricas<br>
+                    • Menú express de alta calidad disponible hasta la madrugada<br>
+                    • Eventos temáticos mensuales con promociones especiales<br>
+                    • Degustaciones guiadas de platos biculturales<br><br>
+                    
+                    ¡El lugar perfecto para disfrutar nuestras famosas "Ofertas Históricas" en fechas 
+                    patrias y celebraciones especiales!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="nosotros-footer">
+        <div class="nosotros-footer__contenido">
+            <p class="nosotros-footer__texto">
+                copyright © 2025 Humaitá resto-bar -
+                <a href="#">Políticas de Privacidad</a> |
+                <a href="./_contacto.html">Contacto</a>
+            </p>
+            <p class="contacto-footer__texto">Desarrollado por Ian Fariña</p>
+        </div>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
