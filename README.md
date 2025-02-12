@@ -12,4 +12,4 @@ Como fue dicho anteriormente, el código utilizado es en un 90% de lo aprendido 
 
 Nombre: Ian Franco Fariña Núñez
 Github: https://github.com/ianfranfn/proyecto-integrador.etapa-1.git
-Netlify: 
+Netlify: https://proyectointegrador-etapa1-ian.netlify.app/
